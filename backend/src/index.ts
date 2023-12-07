@@ -14,5 +14,6 @@ app.use(express.json());
 app.use("/auth", (req, res) => {});
 
 mongoose.connect(process.env.MONGO_URL!).then(() => {
+  console.log("listening on port 9000");
   app.listen(9000);
 });
